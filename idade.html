@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="boasVindas">
         <h1 id="texto">Fases da Vida</h1>
@@ -22,16 +22,14 @@
     </div>
 
     <div class="formula">
-    <form onsubmit="return idadeVer(event)">
         <label>Digite sua idade:</label><br><br>
-        <button onclick="" type="text" name="idade" id="idade" placeholder="Exemplo: 15" /><br><br>
+        <input type="text" name="idade" id="idade" placeholder="Exemplo: 15" /><br><br>
 
 
-        <input type="submit" value="Fases da Vida" class="fases">
-    </form>
+        <button onclick="idadeVer()" class="fases" type="submit" value=" Verificar Fase da Vida">Verificar Idade</button>
 
-    <div id="resultado"></div>
+    <p id="resultado"></p>
 </div>
-    <script src="imc.js"></script>
+    <script src="idade.js"></script>
 </body>
 </html>

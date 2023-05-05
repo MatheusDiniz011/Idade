@@ -8,20 +8,17 @@ Resultado até 11 anos - Criança;
 var idade;
 var resultado;
 
-function idadeVer(event){
-    
-
-    resultado = document.getElementById("resultado");
-
+function idadeVer(){
+    idade = document.getElementById("idade").value;
     if (idade < 11) {
-        resultado.innerHTML = "<br/> Seu resultado foi: " + idade.toFixed(2) + "<br/> Você ainda é considerado criança!";
-    } else if (imc >= 17 && imc <= 18.49) {
-        resultado.innerHTML = "<br/> Seu resultado foi: " + idade.toFixed(2) + "<br/> Você ainda é considerado adolecente!";
-    } else if (imc >= 18.5 && imc <= 24.99) {
-        resultado.innerHTML = "<br/> Seu resultado foi: " + idade.toFixed(2) + "<br/> Você já é considerado adulto!";
-    } else if (imc >= 25 && imc <= 29.99) {
-        resultado.innerHTML = "<br/> Seu resultado foi: " + idade.toFixed(2) + "<br/> Você já é conciderado idoso!";
-    } 
+        document.getElementById("resultado").innerText="Você ainda é considerado criança!";
+    } else if (idade >= 12 && idade <= 20) {
+        document.getElementById("resultado").innerText="Você ainda é considerado adolecente!";
+    } else if (idade >= 21 && idade <= 65) {
+        document.getElementById("resultado").innerText="Você já é considerado adulto!";
+    } else if (idade >= 66 && idade <= 100) {
+        document.getElementById("resultado").innerText="Você já é considerado idoso!";
+    }
 
     document.getElementById("idade").value = "";
 }
